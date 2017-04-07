@@ -1,0 +1,140 @@
+---
+title: "Exercícios Jornadas NMath"
+author: "R-Ladies Lisboa"
+date: "7 de Abril de 2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+**Carregar Dados**
+```{r}
+#Package 'ggplot2' para elaborar os gráficos
+install.packages("ggplot2")
+library(ggplot2)
+
+#Dataset 'diamonds'
+help(diamonds)
+```
+
+
+**O que podemos descobrir pela análise dos dados...**
+
+- Quantas observaçõeses há no dataset diamonds?
+- Quantas variáveis há no dataset diamonds?
+- Quantos ordered factors há no dataset?
+- Que cor de diamante tem mais valor de mercado?
+```{r}
+#use head, str and/or summary
+
+```
+
+
+**Tarefa 1** -  Crie um histograma de preços de diamantes do dataset diamonds, especificando o "geom".
+
+A distribuição tem uma cauda comprida?
+```{r}
+ggplot()
+```
+
+
+**Tarefa 2** -  Qual a Média e a Mediana da distribuição de preços de diamantes.
+```{r}
+
+```
+
+
+**Tarefa 3** 
+- Quantos diamantes custam menos de $500?
+```{r}
+
+```
+
+- Quantos diamantes custam menos de $250?
+```{r}
+
+```
+
+- Quantos diamantes custam $15000 ou mais?
+```{r}
+
+```
+
+
+**Tarefa 4** - Voltando ao histograma anterior, tente limitar o eixo dos xx e ajustar a binwidth.
+```{r}
+
+```
+
+
+**Tarefa 5** - Use o comando facet_wrap(~variável) e desdobre o gráfico anterior segundo o corte.
+```{r}
+
+```
+
+
+**Tarefa 6** - Investigue o preço dos diamantes usando boxplots e a variável categórica: 'cut'. 
+
+Vê algo de estranho? O quê?
+```{r}
+
+```
+
+```{r}
+#Avaliar a importância do corte para o preço final do diamante
+by()
+```
+
+```{r}
+#Avaliar a importância do corte para o preço final do diamante, mas introduzindo a variável 'carat' - y=price/carat
+
+ggplot()
+```
+
+```{r}
+by()
+```
+
+```{r}
+#Avaliar agora apenas a importância do 'carat' para o preço final do diamante
+
+ggplot()
+```
+
+```{r}
+#Introduzir as variáveis a avaliar: 'price' e 'carat'
+
+cor.test(method="pearson")
+```
+
+
+**Tarefa 7** -  Crie um scatter plot de preço em função da variável x. 
+'x','y' e 'z' são respectivamente a altura, largura e profundidade de um diamante em mm.
+
+Há outliers? Que tipo de relação existe entre x e preço?
+```{r}
+names(diamonds)
+summary(diamonds$x)
+```
+
+```{r}
+
+```
+
+Qual a correlação entre x e preço?
+```{r}
+
+```
+
+
+**Tarefa 8** - Crie um histograma de preços. 
+
+Desdobre o histograma por cores e use a variável 'cut' para colorir os histogramas.
+```{r}
+
+```
+
+
+
+
+
